@@ -1,11 +1,4 @@
 
-// function setBackgroundColor(elementId){
-//     const element = document.getElementById(elementId);
-//     element.classList.add('bg-[#1DD100] text-white')
-    
-// }
-
-
 let seatSelect = 0;
 
 let total = 0;
@@ -109,16 +102,12 @@ for(const seat of seats){
     })
             seat.setAttribute('data-reserved', true);
     
-            // Add visual indication (e.g., change background color)
+            
            
             seat.classList.add('bg-[#1DD100]');
              seat.classList.add('text-white');
         }
-        
-
-
-
-        
+           
         
     })
 }
