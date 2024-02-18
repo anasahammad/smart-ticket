@@ -18,6 +18,7 @@ for(const seat of seats){
     seat.addEventListener("click", function(event){
         
         seat.classList.add('bg-[#1DD100]');
+        seat.classList.add('text-white');
 
 
         let setsLeft = document.getElementById('left-counter').innerText;
@@ -105,17 +106,31 @@ for(const seat of seats){
     })
 }
 
-function next(){
-    let modal = document.getElementById('modal');
+const nam = document.getElementById('name');
+const phone = document.getElementById('phone-number');
+phone.addEventListener('input', function(){
+    if(phone.value !== '' && seatSelect !== 0){
+        const nextBtn = document.getElementById('next-btn');
+        nextBtn.removeAttribute('disabled');
+    }
+})
+
+// if(nam.value !== '' && phone.value !== ''){
+//     const nextBtn = document.getElementById('next-btn');
+//     nextBtn.removeAttribute('disabled');
+// }
+
+// function next(){
+//     let modal = document.getElementById('modal');
+//         modal.classList.remove('hidden');
+// }
+
+    const nextBtn = document.getElementById('next-btn');
+    nextBtn.addEventListener('click', function(){
+
+        let modal = document.getElementById('modal');
         modal.classList.remove('hidden');
-}
-
-    // const nextBtn = document.getElementById('next-btn');
-    // nextBtn.addEventListener('click', function(){
-
-    //     let modal = document.getElementById('modal');
-    //     modal.classList.remove('hidden');
-    // })
+    })
 
 const continueBtn = document.getElementById('continue').addEventListener('click', function(){
      let modal = document.getElementById('modal');
