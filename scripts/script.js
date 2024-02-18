@@ -29,6 +29,11 @@ for(const seat of seats){
         let selectedSeat = document.getElementById('selected-seat');
        
         seatSelect = seatSelect + 1;
+        if(seatSelect > 4){
+            alert("You Cannot Buy more than 5 Tickets at a Time!");
+            seat.classList.remove('bg-[#1DD100]');
+            return;
+        }
         selectedSeat.innerText = seatSelect;
 
         // let get the seatname and price
@@ -62,34 +67,53 @@ for(const seat of seats){
 
         const grandTotalContainer = document.getElementById('grand-total');
        
-
+        grandTotal = total;
+        grandTotalContainer.innerText = grandTotal;
 
         // Coupon 
         const applyBtn = document.getElementById('apply-btn');
     applyBtn.addEventListener('click', function(){
     const inputField = document.getElementById('coupon-input').value;
+     document.getElementById('coupon-field')
     if(inputField == 'NEW15'){
         let discount = total * 0.15;
         grandTotal = total - discount;
-        grandTotalContainer.innerText = grandTotal
+        grandTotalContainer.innerText = grandTotal;
+        document.getElementById('coupon-field').classList.add('hidden');
 
     }
     else if(inputField == 'Couple 20'){
         let discount = total * 0.2;
         grandTotal = total - discount;
         grandTotalContainer.innerText = grandTotal;
+        document.getElementById('coupon-field').classList.add('hidden');
     }
     else{
         grandTotal = total;
         grandTotalContainer.innerText = grandTotal;
     }
-    const couponField = document.getElementById('coupon-field');
-    couponField.classList.add()
+    
+   
 
 })
         
     })
 }
 
+function next(){
+    let modal = document.getElementById('modal');
+        modal.classList.remove('hidden');
+}
 
+    // const nextBtn = document.getElementById('next-btn');
+    // nextBtn.addEventListener('click', function(){
 
+    //     let modal = document.getElementById('modal');
+    //     modal.classList.remove('hidden');
+    // })
+
+const continueBtn = document.getElementById('continue').addEventListener('click', function(){
+     let modal = document.getElementById('modal');
+        modal.classList.add('hidden');
+}
+)

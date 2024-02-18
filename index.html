@@ -25,7 +25,7 @@
     }
 </style>
 </head>
-<body class="bg-[#F7F8F8]">
+<body class="bg-[#F7F8F8] ">
     <!-- Header section start -->
     <header class="w-11/12 mx-auto">
 
@@ -79,9 +79,9 @@
                     Yes, you can run unit tests and view the results directly within the <br>  app. The integrated testing features allow for a streamlined .
                   </p>
                  
-                  <button class="btn bg-[#1DD100] text-[#030712] border-none font-ralway text-[20px] font-bold">
+                  <a href="#select-your-seat-sec"><button class="btn bg-[#1DD100] text-[#030712] border-none font-ralway text-[20px] font-bold">
                     Buy Tickets
-                  </button>
+                  </button></a>
 
                   <!-- divs -->
                   <div class=" grid grid-cols-1 lg:flex gap-4  translate-y-2  lg:translate-y-24  ">
@@ -182,7 +182,7 @@
         </section>
 
         <!-- P.H Paribahan Section -->
-        <section class=" mx-auto my-32 border-t-2 border-t-green-600 rounded-t-[88px] py-20">
+        <section  class=" mx-auto my-32 border-t-2 border-t-green-600 rounded-t-[88px] py-20">
             <h1 class="text-[#030712] text-[40px] text-center font-bold font-raleway">P.H Paribahan</h1>
 
             <p class="text-center text-[#03071299] font-inter text-[18px]">Yes, you can run unit tests and view the results directly within the app. The integrated <br>
@@ -247,7 +247,7 @@
 </div>
             
 <!-- Select Your Seat Section -->
-<div class="  w-10/12 mx-auto bg-white p-8 rounded-3xl">
+<div id="select-your-seat-sec" class="  w-10/12 mx-auto bg-white p-8 rounded-3xl">
   <!-- left side  -->
   <div class="flex gap-4 justify-between">
 
@@ -450,7 +450,7 @@
       </div>
       <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
     </label>
-<button class="btn w-full bg-[#1DD100] text-white my-6">Next</button>
+<button id="next-btn" onclick="next()" class="btn w-full bg-[#1DD100] text-white my-6">Next</button>
 
 <div class="flex justify-between items-center">
   <p class="text-[12px] "><u>Terms and Conditions</u></p>
@@ -463,6 +463,28 @@
 </div>
                 
         </section>
+    <!-- Modal design -->
+        <div id="modal" class="text-center flex justify-center absolute  -translate-y-[200%]  translate-x-1/2 hidden ">
+          <div class=" w-[718px] h-[481px] rounded-2xl bg-base-100 shadow-xl ">
+            <div class="card-body ">
+              <div class="flex  justify-center my-4">
+                <img class="w-[100px] flex justify-center" src="images/success.png" alt="">
+                
+              </div>
+              <div class="flex justify-center"> <h2 class="card-title text-[#27AE60] text-2xl font-semibold text-center">Success</h2></div>
+             
+             
+              <p class="my-4"><span class="text-[#4A4A4A] text-[20px] font-medium">Thank you for Booking Our Bus Seats. <br>
+
+                We are working hard to find the best service and deals for you. <br></span> 
+
+                Shortly you will find a confirmation in your email.</p>
+              <div class="card-actions justify-center">
+                <button id="continue" class="btn w-[300px] bg-[#27AE60] text-white rounded-[32px]">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
 
       <!-- Main section start -->
