@@ -17,7 +17,7 @@ const seats = document.querySelectorAll('.seat');
 for(const seat of seats){
     seat.addEventListener("click", function(event){
         
-        // check if the user book a same seat again
+        // check if the user boaked a same seat again
         if(!seat.getAttribute('data-reserved')) {
            
             let setsLeft = document.getElementById('left-counter').innerText;
@@ -70,17 +70,17 @@ for(const seat of seats){
             grandTotal = total;
             grandTotalContainer.innerText = grandTotal;
     
-            // Coupon 
+           
             // check if the user select 4 seats then he can get apply the coupon
             if(seatSelect == 4){
                 const applyBtn = document.getElementById('apply-btn');
                 applyBtn.removeAttribute('disabled');
             }
-                
+                 // Coupon 
             const applyBtn = document.getElementById('apply-btn');
-        applyBtn.addEventListener('click', function(){
-        const inputField = document.getElementById('coupon-input').value;
-         document.getElementById('coupon-field')
+         applyBtn.addEventListener('click', function(){
+         const inputField = document.getElementById('coupon-input').value;
+          document.getElementById('coupon-field')
          
          if(inputField !== 'NEW15' && inputField !== 'Couple 20' ){
             alert("Invalid Coupon!")
@@ -132,25 +132,17 @@ phone.addEventListener('input', function(){
     }
 })
 
-// if(nam.value !== '' && phone.value !== ''){
-//     const nextBtn = document.getElementById('next-btn');
-//     nextBtn.removeAttribute('disabled');
-// }
 
-// function next(){
-//     let modal = document.getElementById('modal');
-//         modal.classList.remove('hidden');
-// }
 
     const nextBtn = document.getElementById('next-btn');
     nextBtn.addEventListener('click', function(){
-
         let modal = document.getElementById('modal');
         modal.classList.remove('hidden');
     })
 
-const continueBtn = document.getElementById('continue').addEventListener('click', function(){
+    const continueBtn = document.getElementById('continue').addEventListener('click', function(){
      let modal = document.getElementById('modal');
         modal.classList.add('hidden');
+        
 }
 )
