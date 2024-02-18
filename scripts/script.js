@@ -75,6 +75,11 @@ for(const seat of seats){
     applyBtn.addEventListener('click', function(){
     const inputField = document.getElementById('coupon-input').value;
      document.getElementById('coupon-field')
+     
+     if(inputField !== 'NEW15' && inputField !== 'Couple 20' ){
+        alert("Invalid Coupon!")
+        return;
+     }
     if(inputField == 'NEW15'){
         let discount = total * 0.15;
         grandTotal = total - discount;
