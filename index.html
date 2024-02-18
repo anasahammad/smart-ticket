@@ -383,21 +383,21 @@
               <th>Price</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="table-body">
             <!-- row 1 -->
-            <tr>
+            <!-- <tr>
               <td>C2</td>
               <td>Economy</td>
               <td>550</td>
               
-            </tr>
+            </tr> -->
             <!-- row 2 -->
-            <tr class="hover">
+            <!-- <tr class="hover">
               
               <td>C2</td>
               <td>Economy</td>
               <td>550</td>
-            </tr>
+            </tr> -->
           </tbody>
           
         </table>
@@ -408,15 +408,15 @@
         <label class="form-control w-full max-w-xs">
           <div class="label">
             <span class="label-text text-[#030712] font-inter font-medium">Total Price</span>
-            <span class="label-text-alt text-[#030712] font-inter font-medium">BDT 1100</span>
+            <span class="label-text-alt text-[#030712] font-inter font-medium">BDT <span id="total-price">1100</span> </span>
           </div>
-          <div class="flex bg-white">
-            <input type="text" placeholder="Have any copupon?" class="input input-bordered w-full" />
-            <button class="btn bg-[#1DD100] text-white">Apply</button></div>
+          <div id="coupon-field" class="flex bg-white">
+            <input id="coupon-input" type="text" placeholder="Have any copupon?" class="input input-bordered w-full" />
+            <button id="apply-btn" class="btn bg-[#1DD100] text-white" >Apply</button></div>
            
           <div class="label">
             <span class="label-text-alt text-[#030712]  font-inter font-medium">Grand Total</span> 
-            <span class="label-text-alt text-[#030712] font-inter font-medium">BDT 1100</span>
+            <span class="label-text-alt text-[#030712] font-inter font-medium">BDT <span id="grand-total">1100</span> </span>
           </div>
          
         </label>
