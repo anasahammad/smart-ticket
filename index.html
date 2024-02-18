@@ -204,7 +204,7 @@
     </div>
 
     <div class="rounded-xl border-2 border-[#1DD10026] bg-[#1dd10026] p-4 ">
-        <p class="flex justify-center items-center text-center text-[#1DD100] font-inter text-[18px] font-medium gap-2"><img src="images/seat-green-filled.png" alt=""> <span>40 </span>Seats left</p>
+        <p class="flex justify-center items-center text-center text-[#1DD100] font-inter text-[18px] font-medium gap-2"><img src="images/seat-green-filled.png" alt=""> <span id="left-counter">40 </span>Seats left</p>
     </div>
 
  </div>
@@ -249,7 +249,7 @@
 <!-- Select Your Seat Section -->
 <div class="  w-10/12 mx-auto bg-white p-8 rounded-3xl">
   <!-- left side  -->
-  <div class="flex gap-4 ">
+  <div class="flex gap-4 justify-between">
 
  
 
@@ -279,19 +279,19 @@
       <!-- Seat A -->
       <div class="flex items-center justify-between">
         <p>A</p>
-        <button class="btn w-[110px]  mx-8">A1</button>
-        <button class="btn w-[110px] mx-8">A2</button>
-        <button class="btn w-[110px] ml-16 mr-8">A3</button>
-        <button class="btn w-[110px]">A4</button>
+        <button id="A1" class="btn seat  w-[110px]  mx-8">A1</button>
+        <button id="A2" class="btn seat w-[110px] mx-8">A2</button>
+        <button id="A3" class="btn seat w-[110px] ml-16 mr-8">A3</button>
+        <button id="A4" class="btn seat w-[110px]">A4</button>
       
       </div>
       <!-- Seat B -->
       <div class="flex items-center justify-between">
         <p>B</p>
-        <button class="btn w-[110px]  mx-8">B1</button>
-        <button class="btn w-[110px] mx-8">B2</button>
-        <button class="btn w-[110px] ml-16 mr-8">B3</button>
-        <button class="btn w-[110px]">B4</button>
+        <button id="B1" class="btn seat w-[110px]  mx-8">B1</button>
+        <button id="B1"  class="btn seat w-[110px] mx-8">B2</button>
+        <button id="B1"  class="btn seat w-[110px] ml-16 mr-8">B3</button>
+        <button id="B1"  class="btn seat w-[110px]">B4</button>
       </div>
       <!-- Seat C -->
       <div class="flex items-center justify-between">
@@ -378,7 +378,7 @@
           <thead>
             <tr class="text-[#030712]">
              
-              <th>Seat <span class="bg-[#1DD100] text-white px-2 rounded-3xl ">2</span></th>
+              <th>Seat <span id="selected-seat" class="bg-[#1DD100] text-white px-2 rounded-3xl ">0</span></th>
               <th>Class</th>
               <th>Price</th>
             </tr>
@@ -498,5 +498,6 @@
     
 <!-- footer end -->
     
+<script src="scripts/script.js"></script>
 </body>
 </html>
