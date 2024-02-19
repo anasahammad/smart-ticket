@@ -23,7 +23,7 @@ for(const seat of seats){
            
             seatSelect = seatSelect + 1;
             if(seatSelect > 4){
-                alert("You Cannot Buy more than 5 Tickets at a Time!");
+                alert("You Cannot Buy more than 4 Tickets at a Time!");
                 seat.classList.remove('bg-[#1DD100]');
                 return;
             }
@@ -115,6 +115,7 @@ for(const seat of seats){
 const nam = document.getElementById('name');
 const phone = document.getElementById('phone-number');
 phone.addEventListener('input', function(){
+    // Phone  number and select at least one seat is required to go to the next button
     if(phone.value !== '' && seatSelect !== 0){
         const nextBtn = document.getElementById('next-btn');
         nextBtn.removeAttribute('disabled');
@@ -132,6 +133,7 @@ phone.addEventListener('input', function(){
     const continueBtn = document.getElementById('continue').addEventListener('click', function(){
      let modal = document.getElementById('modal');
         modal.classList.add('hidden');
+
         
 }
 )
