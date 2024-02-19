@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = "light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -450,7 +450,7 @@
       </div>
       <input  type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
     </label>
-<button id="next-btn" disabled  class="btn w-full bg-[#1DD100] text-white my-6">Next</button>
+<button onclick="my_modal_3.showModal()" id="next-btn" disabled  class="btn w-full bg-[#1DD100] text-white my-6">Next</button>
 
 <div class="flex justify-between items-center">
   <p class="text-[12px] "><u>Terms and Conditions</u></p>
@@ -464,27 +464,34 @@
                 
         </section>
     <!-- Modal design -->
-        <div id="modal" class="text-center flex justify-center absolute -translate-y-0 -translate-x-0  lg:-translate-y-[200%]  lg:translate-x-1/2 hidden ">
-          <div class=" lg:w-[718px] lg:h-[481px] rounded-2xl bg-base-100 shadow-xl ">
-            <div class="card-body ">
-              <div class="flex  justify-center my-4">
-                <img class="w-[100px] flex justify-center" src="images/success.png" alt="">
+    <dialog id="my_modal_3" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 ">
+            </button>
+        </form>
+       
                 
-              </div>
-              <div class="flex justify-center"> <h2 class="card-title text-[#27AE60] text-2xl font-semibold text-center">Success</h2></div>
-             
-             
-              <p class="my-4"><span class="text-[#4A4A4A] text-[20px] font-medium">Thank you for Booking Our Bus Seats. <br>
+          <section  class=" min-h-screen p-4 rounded-lg bg-white   z-10 ">
+              <div class="  text-white  flex flex-col justify-center items-center space-y-4 box-border  ">
+                  <img src="images/success.png" alt="">
+                  <h3 class="text-[#27AE60] text-2xl font-semibold text-center">Success</h3>
+                  <p class="my-4 text-center"><span class="text-[#4A4A4A] text-[20px] font-medium">Thank you for Booking Our Bus Seats. <br>
 
-                We are working hard to find the best service and deals for you. <br></span> 
-
-                Shortly you will find a confirmation in your email.</p>
-              <div class="card-actions justify-center">
-                <button id="continue" class="btn w-[300px] bg-[#27AE60] text-white rounded-[32px]">Continue</button>
+                    We are working hard to find the best service and deals for you. <br>
+                  </span> 
+    
+                    Shortly you will find a confirmation in your email.</p>
+                  <button id="continue" class="btn w-[300px] bg-[#27AE60] text-white rounded-[32px] ">Continue</button>
+                  
               </div>
-            </div>
-          </div>
-        </div>
+    
+          </section>
+        
+         </div>
+        
+     
+    </dialog>
     </main>
 
       <!-- Main section end -->

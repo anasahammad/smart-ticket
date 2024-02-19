@@ -124,17 +124,8 @@ phone.addEventListener('input', function(){
 
 
 
-    const nextBtn = document.getElementById('next-btn');
-    nextBtn.addEventListener('click', function(){
-        let modal = document.getElementById('modal');
-        modal.classList.remove('hidden');
-    })
-
-    const continueBtn = document.getElementById('continue').addEventListener('click', function(){
-     let modal = document.getElementById('modal');
-        modal.classList.add('hidden');
-
-        // I have  set this extra reload option from google
-        window.location.reload();
-}
-)
+ 
+const contiue = document.getElementById("continue");
+contiue.addEventListener('click',function(){
+ window.location.reload()
+})
