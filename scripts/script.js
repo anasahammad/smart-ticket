@@ -134,6 +134,7 @@ phone.addEventListener('input', function(){
      let modal = document.getElementById('modal');
         modal.classList.add('hidden');
 
-        
+        // I have  set this extra reload option from google
+        window.location.reload();
 }
 )
